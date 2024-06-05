@@ -17,7 +17,7 @@ My research interests are in the areas of **Computational Social Science** and *
 
 <div style="display: flex;">
   <div style="flex: 1; padding: 10px;">
-    <h3>Interests</h3>
+    <h2>Interests</h2>
     <ul>
       <li>Computational Social Science</li>
       <li>Reinforcement Learning</li>
@@ -28,7 +28,7 @@ My research interests are in the areas of **Computational Social Science** and *
     </ul>
   </div>
   <div style="flex: 1; padding: 10px;">
-    <h3>Education</h3>
+    <h2>Education</h2>
     <p><img src="https://img.icons8.com/ios-filled/24/000000/graduation-cap.png" alt="Education Icon"> MSc in Applied Computing, 2025<br>
     <span style="font-size: smaller;">Wilfrid Laurier University</span></p>
     <p><img src="https://img.icons8.com/ios-filled/24/000000/graduation-cap.png" alt="Education Icon"> BSc in Computer Engineering, 2022<br>
