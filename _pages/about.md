@@ -24,6 +24,7 @@ My research interests are in the areas of **Computational Social Science** and *
       <li>Human-AI Interaction</li>
       <li>Machine Learning</li>
       <li>NLP</li>
+      <li>Explainable AI</li>
     </ul>
   </div>
   <div style="flex: 1; padding: 10px;">
