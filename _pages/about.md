@@ -27,9 +27,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m a Ph.D. student in Electrical & Computer Engineering at the University of Waterloo, supervised by Prof. [Mark Crowley](https://markcrowley.ca/) on deep reinforcement learning and machine ethics. My focus is ethical decision-making in multi-agent settings, especially how social learning can help RL agents behave responsibly in real-world setup. 
+I’m a Ph.D. student in Electrical & Computer Engineering at the University of Waterloo, supervised by Prof. [Mark Crowley](https://markcrowley.ca/) conducting research on deep reinforcement learning and machine ethics. My focus is ethical decision-making in multi-agent settings, especially how social learning can help RL agents behave responsibly in real-world setup. 
 
-Before Waterloo, I completed an MASc in Applied Computing at Wilfrid Laurier University with an A+ GPA. My master’s research built reinforcement-learning and optimization methods for intelligent transportation and safety problems, including reliable real-time EV routing/charging and dynamic patrol scheduling.  I hold a B.Sc. in Software Engineering and started doing applied ML research early, including work on phishing-website detection.   
+Before Waterloo, I completed an MASc in Applied Computing at Wilfrid Laurier University with an A+ GPA. My master’s research built reinforcement learning and optimization methods for intelligent transportation and safety problems, including reliable real-time EV routing/charging and dynamic patrol scheduling.  I hold a B.Sc. in Software Engineering and started doing applied ML research early, including work on phishing websites detection.   
 
 My work has been published in peer-reviewed venues such AAAI, IEEE ISIE, IECON, and DRCN. I’m honored to have received Wilfrid Laurier University’s Academic Excellence Gold Medal and the University of Waterloo International Doctoral Student Award, alongside multiple graduate scholarships and fellowships. 
 
