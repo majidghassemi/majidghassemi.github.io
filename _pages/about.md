@@ -33,5 +33,4 @@ Before Waterloo, I completed an MASc in Applied Computing at Wilfrid Laurier Uni
 
 My work has been published in peer-reviewed venues such AAAI, IEEE ISIE, IECON, and DRCN. I’m honored to have received Wilfrid Laurier University’s Academic Excellence Gold Medal and the University of Waterloo International Doctoral Student Award, alongside multiple graduate scholarships and fellowships. 
 
-Alongside research, I’ve taught and mentored students across AI, data mining, and algorithms, and I run a free 1:1 mentorship initiative for those from underrepresented backgrounds.
-
+Alongside research, I’ve TA'ed and mentored students across various courses such as AI, data mining, algorithm design, and introduction to programming, and I run a free 1:1 mentorship initiative for those from underrepresented backgrounds.
