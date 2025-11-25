@@ -429,16 +429,16 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
+            },},{id: "news-a-long-announcement-with-details",
           title: 'A long announcement with details',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          description: "",
+          section: "News",},{id: "news-i-am-happy-to-share-that-our-paper-𝐓𝐨𝐰𝐚𝐫𝐝-𝐕𝐢𝐫𝐭𝐮𝐨𝐮𝐬-𝐑𝐞𝐢𝐧𝐟𝐨𝐫𝐜𝐞𝐦𝐞𝐧𝐭-𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠-𝐀-𝐂𝐫𝐢𝐭𝐢𝐪𝐮𝐞-𝐚𝐧𝐝-𝐑𝐨𝐚𝐝𝐦𝐚𝐩-has-been-accepted-to-the-𝑀𝑎𝑐ℎ𝑖𝑛𝑒-𝐸𝑡ℎ𝑖𝑐𝑠-𝐹𝑜𝑟𝑚𝑎𝑙-𝑀𝑒𝑡ℎ𝑜𝑑𝑠-𝑡𝑜-𝐸𝑚𝑒𝑟𝑔𝑒𝑛𝑡-𝑀𝑎𝑐ℎ𝑖𝑛𝑒-𝐸𝑡ℎ𝑖𝑐𝑠-workshop-at-the-𝐀𝐀𝐀𝐈-conference",
+          title: 'I am happy to share that our paper “𝐓𝐨𝐰𝐚𝐫𝐝 𝐕𝐢𝐫𝐭𝐮𝐨𝐮𝐬 𝐑𝐞𝐢𝐧𝐟𝐨𝐫𝐜𝐞𝐦𝐞𝐧𝐭 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠: 𝐀...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
