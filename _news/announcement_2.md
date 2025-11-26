@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-🥇 I have won the Wilfrid Laurier's Academic Excellence Master's Gold Medal! It is a prestigious medal awarding to master students with competitive achievements.
+🥇 I graduated from the Master of Applied Computing program at Wilfrid Laurier University, where I was awarded Wilfrid Laurier’s Academic Excellence Master’s Gold Medal, the university’s most prestigious distinction for master’s students.
