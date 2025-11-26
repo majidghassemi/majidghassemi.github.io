@@ -30,8 +30,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "news-i-have-won-the-wilfrid-laurier-s-academic-excellence-master-s-gold-medal-it-is-a-prestigious-medal-awarding-to-master-students-with-competitive-achievements",
-          title: '🥇 I have won the Wilfrid Laurier’s Academic Excellence Master’s Gold Medal! It...',
+        },{id: "news-i-graduated-from-the-master-of-applied-computing-program-at-wilfrid-laurier-university-where-i-was-awarded-wilfrid-laurier-s-academic-excellence-master-s-gold-medal-the-university-s-most-prestigious-distinction-for-master-s-students",
+          title: '🥇 I graduated from the Master of Applied Computing program at Wilfrid Laurier...',
           description: "",
           section: "News",},{id: "news-i-have-started-my-ph-d-in-ece-at-the-university-of-waterloo-working-with-dr-mark-crowley",
           title: '🎉 I have started my Ph.D. in ECE at the University of Waterloo...',
