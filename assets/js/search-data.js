@@ -34,7 +34,7 @@ ninja.data = [{
           title: 'I graduated from the Master of Applied Computing program at Wilfrid Laurier University,...',
           description: "",
           section: "News",},{id: "news-i-have-started-my-ph-d-in-ece-at-the-university-of-waterloo-working-with-dr-mark-crowley",
-          title: '🎉 I have started my Ph.D. in ECE at the University of Waterloo...',
+          title: 'I have started my Ph.D. in ECE at the University of Waterloo working...',
           description: "",
           section: "News",},{id: "news-i-am-happy-to-share-that-our-paper-𝐓𝐨𝐰𝐚𝐫𝐝-𝐕𝐢𝐫𝐭𝐮𝐨𝐮𝐬-𝐑𝐞𝐢𝐧𝐟𝐨𝐫𝐜𝐞𝐦𝐞𝐧𝐭-𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠-𝐀-𝐂𝐫𝐢𝐭𝐢𝐪𝐮𝐞-𝐚𝐧𝐝-𝐑𝐨𝐚𝐝𝐦𝐚𝐩-has-been-accepted-to-the-𝑀𝑎𝑐ℎ𝑖𝑛𝑒-𝐸𝑡ℎ𝑖𝑐𝑠-𝐹𝑜𝑟𝑚𝑎𝑙-𝑀𝑒𝑡ℎ𝑜𝑑𝑠-𝑡𝑜-𝐸𝑚𝑒𝑟𝑔𝑒𝑛𝑡-𝑀𝑎𝑐ℎ𝑖𝑛𝑒-𝐸𝑡ℎ𝑖𝑐𝑠-workshop-at-the-𝐀𝐀𝐀𝐈-conference",
           title: 'I am happy to share that our paper “𝐓𝐨𝐰𝐚𝐫𝐝 𝐕𝐢𝐫𝐭𝐮𝐨𝐮𝐬 𝐑𝐞𝐢𝐧𝐟𝐨𝐫𝐜𝐞𝐦𝐞𝐧𝐭 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠: 𝐀...',
