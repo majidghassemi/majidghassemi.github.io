@@ -19,12 +19,12 @@ social: true # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 10 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: false
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  limit: 10 # leave blank to include all the blog posts
 ---
 
 I’m a Ph.D. student in Electrical & Computer Engineering at the University of Waterloo, supervised by Prof. [Mark Crowley](https://markcrowley.ca/) conducting research on deep reinforcement learning and machine ethics. My focus is ethical decision-making in multi-agent settings, especially how social learning can help RL agents behave responsibly in real-world setup. 
