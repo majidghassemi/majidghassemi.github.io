@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 I have started my Ph.D. in ECE at the University of Waterloo working with Dr. Mark Crowley.
+I have started my Ph.D. in ECE at the University of Waterloo working with Dr. Mark Crowley.
