@@ -31,7 +31,7 @@ ninja.data = [{
             window.location.href = "/teaching/";
           },
         },{id: "news-i-graduated-from-the-master-of-applied-computing-program-at-wilfrid-laurier-university-where-i-was-awarded-wilfrid-laurier-s-academic-excellence-master-s-gold-medal-the-university-s-most-prestigious-distinction-for-master-s-students",
-          title: '🥇 I graduated from the Master of Applied Computing program at Wilfrid Laurier...',
+          title: 'I graduated from the Master of Applied Computing program at Wilfrid Laurier University,...',
           description: "",
           section: "News",},{id: "news-i-have-started-my-ph-d-in-ece-at-the-university-of-waterloo-working-with-dr-mark-crowley",
           title: '🎉 I have started my Ph.D. in ECE at the University of Waterloo...',
