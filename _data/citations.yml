@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-01-07'
+  last_updated: '2026-01-14'
 papers:
   cHOAJEgAAAAJ:-f6ydRqryjwC:
     citations: 0
     title: Toward Virtuous Reinforcement Learning
     year: '2025'
   cHOAJEgAAAAJ:3fE2CSJIrl8C:
-    citations: 46
+    citations: 48
     title: Introduction to Reinforcement Learning
     year: '2024'
   cHOAJEgAAAAJ:4TOpqqG69KYC:
@@ -29,6 +29,10 @@ papers:
     citations: 27
     title: 'Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges'
     year: '2024'
+  cHOAJEgAAAAJ:mB3voiENLucC:
+    citations: 0
+    title: Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response
+    year: '2025'
   cHOAJEgAAAAJ:qxL8FJ1GzNcC:
     citations: 0
     title: Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety
