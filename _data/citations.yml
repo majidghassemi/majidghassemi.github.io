@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-02-16'
+  last_updated: '2026-02-23'
 papers:
   cHOAJEgAAAAJ:-f6ydRqryjwC:
     citations: 0
     title: Toward Virtuous Reinforcement Learning
     year: '2025'
   cHOAJEgAAAAJ:3fE2CSJIrl8C:
-    citations: 51
+    citations: 54
     title: Introduction to Reinforcement Learning
     year: '2024'
   cHOAJEgAAAAJ:4JMBOYKVnBMC:
@@ -34,7 +34,7 @@ papers:
     title: "Navigating Smart Order Routing in Fixed Income Trading with Linear Programming and Dijkstra\u2019s Algorithm"
     year: '2024'
   cHOAJEgAAAAJ:kNdYIx-mwKoC:
-    citations: 32
+    citations: 34
     title: 'Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges'
     year: '2024'
   cHOAJEgAAAAJ:mB3voiENLucC:
