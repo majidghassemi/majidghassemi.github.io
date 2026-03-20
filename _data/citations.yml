@@ -1,14 +1,10 @@
 metadata:
-  last_updated: '2026-03-09'
+  last_updated: '2026-03-20'
 papers:
   cHOAJEgAAAAJ:-f6ydRqryjwC:
     citations: 0
     title: Toward Virtuous Reinforcement Learning
     year: '2025'
-  cHOAJEgAAAAJ:3fE2CSJIrl8C:
-    citations: 57
-    title: Introduction to Reinforcement Learning
-    year: '2024'
   cHOAJEgAAAAJ:4JMBOYKVnBMC:
     citations: 0
     title: 'Objective Decoupling in Social Reinforcement Learning: Recovering Ground Truth from Sycophantic Majorities'
@@ -33,15 +29,23 @@ papers:
     citations: 0
     title: "Navigating Smart Order Routing in Fixed Income Trading with Linear Programming and Dijkstra\u2019s Algorithm"
     year: '2024'
+  cHOAJEgAAAAJ:iH-uZ7U-co4C:
+    citations: 0
+    title: Learning When to Trust in Contextual Bandits
+    year: '2026'
   cHOAJEgAAAAJ:j3f4tGmQtD8C:
     citations: 0
     title: Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response
     year: '2025'
   cHOAJEgAAAAJ:kNdYIx-mwKoC:
-    citations: 36
+    citations: 39
     title: 'Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges'
     year: '2024'
   cHOAJEgAAAAJ:qxL8FJ1GzNcC:
     citations: 0
     title: Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety
     year: '2025'
+  cHOAJEgAAAAJ:r0BpntZqJG4C:
+    citations: 61
+    title: Introduction to reinforcement learning
+    year: '2024'
