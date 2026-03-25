@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-20'
+  last_updated: '2026-03-25'
 papers:
   cHOAJEgAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -22,7 +22,7 @@ papers:
     title: "Citation count prediction based on Google Scholar profiles and Clarivate\u2019s journal citation reports"
     year: '2026'
   cHOAJEgAAAAJ:UebtZRa9Y70C:
-    citations: 80
+    citations: 81
     title: A high-accuracy phishing website detection method based on machine learning
     year: '2023'
   cHOAJEgAAAAJ:_kc_bZDykSQC:
@@ -31,7 +31,7 @@ papers:
     year: '2024'
   cHOAJEgAAAAJ:iH-uZ7U-co4C:
     citations: 0
-    title: Learning When to Trust in Contextual Bandits
+    title: Learning When to Trust in Contextual Social Bandits
     year: '2026'
   cHOAJEgAAAAJ:j3f4tGmQtD8C:
     citations: 0
@@ -46,6 +46,6 @@ papers:
     title: Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety
     year: '2025'
   cHOAJEgAAAAJ:r0BpntZqJG4C:
-    citations: 61
+    citations: 62
     title: Introduction to reinforcement learning
     year: '2024'
