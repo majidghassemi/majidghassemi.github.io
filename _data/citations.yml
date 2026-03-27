@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-25'
+  last_updated: '2026-03-27'
 papers:
   cHOAJEgAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -46,6 +46,6 @@ papers:
     title: Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety
     year: '2025'
   cHOAJEgAAAAJ:r0BpntZqJG4C:
-    citations: 62
+    citations: 64
     title: Introduction to reinforcement learning
     year: '2024'
