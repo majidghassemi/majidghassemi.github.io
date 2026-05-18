@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-13'
+  last_updated: '2026-05-18'
 papers:
   cHOAJEgAAAAJ:4JMBOYKVnBMC:
     citations: 0
@@ -18,7 +18,7 @@ papers:
     title: "Citation count prediction based on Google Scholar profiles and Clarivate\u2019s journal citation reports"
     year: '2026'
   cHOAJEgAAAAJ:UebtZRa9Y70C:
-    citations: 87
+    citations: 88
     title: A high-accuracy phishing website detection method based on machine learning
     year: '2023'
   cHOAJEgAAAAJ:_kc_bZDykSQC:
@@ -33,6 +33,10 @@ papers:
     citations: 0
     title: Learning When to Trust in Contextual Social Bandits
     year: '2026'
+  cHOAJEgAAAAJ:isC4tDSrTZIC:
+    citations: 5
+    title: 'Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges. arXiv 2024'
+    year: Unknown Year
   cHOAJEgAAAAJ:j3f4tGmQtD8C:
     citations: 0
     title: Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response
@@ -41,11 +45,15 @@ papers:
     citations: 46
     title: 'Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges'
     year: '2024'
+  cHOAJEgAAAAJ:k_IJM867U9cC:
+    citations: 0
+    title: 'Scaling Limits of Deep Reinforcement Learning: A Stability Analysis with Maximal Update Parametrization'
+    year: Unknown Year
   cHOAJEgAAAAJ:qxL8FJ1GzNcC:
     citations: 0
     title: Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety
     year: '2025'
   cHOAJEgAAAAJ:r0BpntZqJG4C:
-    citations: 67
+    citations: 69
     title: Introduction to reinforcement learning
     year: '2024'
