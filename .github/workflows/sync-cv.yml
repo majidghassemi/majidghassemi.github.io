@@ -1,0 +1,83 @@
+name: Sync CV from Overleaf
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours — adjust to taste
+  workflow_dispatch:          # also triggerable manually from the Actions tab
+
+jobs:
+  sync-cv:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout your alfolio website repo ───────────────────────────────
+      - name: Checkout website repo
+        uses: actions/checkout@v4
+
+      # ── 2. Pull LaTeX source from Overleaf via the Git bridge ───────────────
+      - name: Clone Overleaf project
+        run: |
+          git clone \
+            "https://${{ secrets.OVERLEAF_GIT_TOKEN }}@git.overleaf.com/${{ secrets.OVERLEAF_PROJECT_ID }}" \
+            overleaf-cv
+
+      # ── 3. Parse the LaTeX CV → _data/cv.yml ────────────────────────────────
+      #   Extracts Education, Research/Industry/Teaching Experience,
+      #   Publications, Honors & Awards, Service, and Grants into the
+      #   exact YAML structure alfolio's CV page template expects.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      - name: Parse CV → _data/cv.yml
+        run: |
+          python .github/scripts/parse_cv.py \
+            overleaf-cv/main.tex \
+            _data/cv.yml
+        # If your root .tex file has a different name, change it above.
+
+      # ── 4. Compile PDF with a full TeX Live environment ─────────────────────
+      - name: Compile LaTeX → PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: overleaf-cv
+          root_file: main.tex
+          # Your CV uses \usepackage{libertine} which is pdflatex-native,
+          # so latexmk_use_xelatex is intentionally unset (defaults to pdflatex).
+
+      # ── 5. Copy the compiled PDF into alfolio's assets ──────────────────────
+      - name: Copy PDF → assets/pdf/cv.pdf
+        run: |
+          mkdir -p assets/pdf
+          cp overleaf-cv/main.pdf assets/pdf/cv.pdf
+          # alfolio's _config.yml references this as: cv_pdf: /assets/pdf/cv.pdf
+
+      # ── 6. Copy LaTeX source into assets/cv/ ────────────────────────────────
+      - name: Copy LaTeX source → assets/cv/
+        run: |
+          mkdir -p assets/cv
+          rsync -av \
+            --exclude='.git' \
+            --exclude='*.aux'  --exclude='*.log'  --exclude='*.out' \
+            --exclude='*.fls'  --exclude='*.fdb_latexmk' \
+            --exclude='*.synctex.gz' \
+            overleaf-cv/ assets/cv/
+
+      # ── 7. Commit and push only when something actually changed ──────────────
+      - name: Commit and push changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add _data/cv.yml assets/pdf/cv.pdf assets/cv/
+
+          if git diff --staged --quiet; then
+            echo "Nothing changed — CV is already up to date."
+          else
+            git commit -m "chore(cv): sync from Overleaf [skip ci]"
+            git push
+          fi
