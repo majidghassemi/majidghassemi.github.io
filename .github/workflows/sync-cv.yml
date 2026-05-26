@@ -12,7 +12,7 @@ jobs:
     steps:
       # ── 1. Checkout your alfolio website repo ───────────────────────────────
       - name: Checkout website repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       # ── 2. Pull LaTeX source from Overleaf via the Git bridge ───────────────
       - name: Clone Overleaf project
