@@ -18,8 +18,8 @@ jobs:
       - name: Clone Overleaf project
         run: |
           git clone \
-            "https://${{ secrets.OVERLEAF_GIT_TOKEN }}@git.overleaf.com/${{ secrets.OVERLEAF_PROJECT_ID }}" \
-            overleaf-cv
+          "https://git:${{ secrets.OVERLEAF_GIT_TOKEN }}@git.overleaf.com/${{ secrets.OVERLEAF_PROJECT_ID }}" \
+          overleaf-cv
 
       # ── 3. Parse the LaTeX CV → _data/cv.yml ────────────────────────────────
       #   Extracts Education, Research/Industry/Teaching Experience,
