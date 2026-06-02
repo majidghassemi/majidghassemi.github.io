@@ -30,10 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "news-i-am-awarded-the-university-of-waterloo-s-graduate-student-research-dissemination-award-gsrda",
-          title: 'I am awarded the University of Waterloo’s Graduate Student Research Dissemination Award (GSRDA)!...',
-          description: "",
-          section: "News",},{id: "news-i-graduated-from-the-master-of-applied-computing-program-at-wilfrid-laurier-university-where-i-was-awarded-wilfrid-laurier-s-academic-excellence-master-s-gold-medal-the-university-s-most-prestigious-distinction-for-master-s-students",
+        },{id: "news-i-graduated-from-the-master-of-applied-computing-program-at-wilfrid-laurier-university-where-i-was-awarded-wilfrid-laurier-s-academic-excellence-master-s-gold-medal-the-university-s-most-prestigious-distinction-for-master-s-students",
           title: 'I graduated from the Master of Applied Computing program at Wilfrid Laurier University,...',
           description: "",
           section: "News",},{id: "news-i-have-started-my-ph-d-in-ece-at-the-university-of-waterloo-working-with-dr-mark-crowley",
@@ -47,6 +44,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-my-paper-on-deep-reinforcement-learning-s-scaling-limits-is-accepted-to-canadian-ai-2026",
           title: 'My paper on Deep Reinforcement Learning’s scaling limits is accepted to Canadian AI...',
+          description: "",
+          section: "News",},{id: "news-i-am-awarded-the-university-of-waterloo-s-graduate-student-research-dissemination-award-gsrda",
+          title: 'I am awarded the University of Waterloo’s Graduate Student Research Dissemination Award (GSRDA)!...',
           description: "",
           section: "News",},{id: "news-two-of-my-papers-are-accepted-to-icml-26-workshops-pluralistic-alignment-and-philml",
           title: 'Two of my papers are accepted to ICML’26 Workshops (Pluralistic Alignment and PhilML)!...',
