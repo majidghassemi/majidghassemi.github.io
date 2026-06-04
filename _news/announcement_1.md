@@ -5,4 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I am happy to share that our paper "𝐓𝐨𝐰𝐚𝐫𝐝 𝐕𝐢𝐫𝐭𝐮𝐨𝐮𝐬 𝐑𝐞𝐢𝐧𝐟𝐨𝐫𝐜𝐞𝐦𝐞𝐧𝐭 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠: 𝐀 𝐂𝐫𝐢𝐭𝐢𝐪𝐮𝐞 𝐚𝐧𝐝 𝐑𝐨𝐚𝐝𝐦𝐚𝐩" has been accepted to the 𝑀𝑎𝑐ℎ𝑖𝑛𝑒 𝐸𝑡ℎ𝑖𝑐𝑠: 𝐹𝑜𝑟𝑚𝑎𝑙 𝑀𝑒𝑡ℎ𝑜𝑑𝑠 𝑡𝑜 𝐸𝑚𝑒𝑟𝑔𝑒𝑛𝑡 𝑀𝑎𝑐ℎ𝑖𝑛𝑒 𝐸𝑡ℎ𝑖𝑐𝑠 workshop at the 𝐀𝐀𝐀𝐈 Conference!
+My paper "**Toward Virtuous Reinforcement Learning: A Critique and Roadmap** has been accepted to *Machine Ethics: Formal Methods to Emergent Machine Ethics workshop* at the **AAAI 2026** conference!
+
