@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-10'
+  last_updated: '2026-06-12'
 papers:
   cHOAJEgAAAAJ:4JMBOYKVnBMC:
     citations: 0
@@ -9,16 +9,24 @@ papers:
     citations: 2
     title: 'Reinforcement Learning for Scheduling and Routing: Electric Vehicles Charging and Patrol Scheduling'
     year: '2025'
+  cHOAJEgAAAAJ:GnPB-g6toBAC:
+    citations: 0
+    title: Real-Time Electric Vehicle Routing and Charging Optimization with Battery Life Consideration
+    year: '2026'
   cHOAJEgAAAAJ:M3ejUd6NZC8C:
     citations: 0
     title: Comparative Analysis of Reinforcement Learning for Reliable Real-Time EV Routing and Charging
     year: '2025'
+  cHOAJEgAAAAJ:O3NaXMp0MMsC:
+    citations: 0
+    title: Can Standard MARL Metrics Distinguish Communicative from Strategic Action?
+    year: '2026'
   cHOAJEgAAAAJ:R3hNpaxXUhUC:
     citations: 1
     title: "Citation count prediction based on Google Scholar profiles and Clarivate\u2019s journal citation reports"
     year: '2026'
   cHOAJEgAAAAJ:UebtZRa9Y70C:
-    citations: 89
+    citations: 88
     title: A high-accuracy phishing website detection method based on machine learning
     year: '2023'
   cHOAJEgAAAAJ:_kc_bZDykSQC:
@@ -38,11 +46,11 @@ papers:
     title: Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response
     year: '2025'
   cHOAJEgAAAAJ:kNdYIx-mwKoC:
-    citations: 52
+    citations: 54
     title: 'Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges'
     year: '2024'
   cHOAJEgAAAAJ:qxL8FJ1GzNcC:
-    citations: 0
+    citations: 1
     title: Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety
     year: '2025'
   cHOAJEgAAAAJ:r0BpntZqJG4C:
