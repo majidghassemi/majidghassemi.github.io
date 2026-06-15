@@ -23,9 +23,15 @@
 - title: Publications
   type: list
   contents:
-  - Citation count prediction based on Google Scholar profiles and Clarivate’s journal
-    citation reports. Mahdi Bahaghighat, Leila Akbari, Majid Ghasemi, and Qin Xin.
-    Information Research journal.
+  - 'Real-Time Electric Vehicle Routing and Charging Optimization with Battery Life
+    Consideration. Dariush Ebrahimi, Majid Ghasemi, Mohammad Kashefi, and Fadi Alzhouri.
+    Internet of Things journal. Rethinking AI Alignment: From Static Rewards to Social
+    Reinforcement Learning. Majid Ghasemi, and Mark Crowley. ICML 2026 Pluralistic
+    ALignment Workshop. Can Standard MARL Metrics Distinguish Communicative from Strategic
+    Action?. Majid Ghasemi, and Mark Crowley. ICML 2026 PhilML Workshop. Citation
+    count prediction based on Google Scholar profiles and Clarivate’s journal citation
+    reports. Mahdi Bahaghighat, Leila Akbari, Majid Ghasemi, and Qin Xin. Information
+    Research journal.'
   - 'Toward Virtuous Reinforcement Learning: A Critique and Roadmap. Majid Ghasemi,
     and Mark Crowley. Machine Ethics: from formal methods to emergent machine ethics
     workshop at the AAAI conference.'
