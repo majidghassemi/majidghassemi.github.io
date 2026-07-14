@@ -23,15 +23,16 @@
 - title: Publications
   type: list
   contents:
-  - 'Real-Time Electric Vehicle Routing and Charging Optimization with Battery Life
-    Consideration. Dariush Ebrahimi, Majid Ghasemi, Mohammad Kashefi, and Fadi Alzhouri.
-    Internet of Things journal. Rethinking AI Alignment: From Static Rewards to Social
-    Reinforcement Learning. Majid Ghasemi, and Mark Crowley. ICML 2026 Pluralistic
-    ALignment Workshop. Can Standard MARL Metrics Distinguish Communicative from Strategic
-    Action?. Majid Ghasemi, and Mark Crowley. ICML 2026 PhilML Workshop. Citation
-    count prediction based on Google Scholar profiles and Clarivate’s journal citation
-    reports. Mahdi Bahaghighat, Leila Akbari, Majid Ghasemi, and Qin Xin. Information
-    Research journal.'
+  - 'Learning When to Trust in Contextual Social Bandits. Majid Ghasemi, and Mark
+    Crowley. 19th European Workshop on Reinforcement Learning. Real-Time Electric
+    Vehicle Routing and Charging Optimization with Battery Life Consideration. Dariush
+    Ebrahimi, Majid Ghasemi, Mohammad Kashefi, and Fadi Alzhouri. Internet of Things
+    journal. Rethinking AI Alignment: From Static Rewards to Social Reinforcement
+    Learning. Majid Ghasemi, and Mark Crowley. ICML 2026 Pluralistic ALignment Workshop.
+    Can Standard MARL Metrics Distinguish Communicative from Strategic Action?. Majid
+    Ghasemi, and Mark Crowley. ICML 2026 PhilML Workshop. Citation count prediction
+    based on Google Scholar profiles and Clarivate’s journal citation reports. Mahdi
+    Bahaghighat, Leila Akbari, Majid Ghasemi, and Qin Xin. Information Research journal.'
   - 'Toward Virtuous Reinforcement Learning: A Critique and Roadmap. Majid Ghasemi,
     and Mark Crowley. Machine Ethics: from formal methods to emergent machine ethics
     workshop at the AAAI conference.'
@@ -59,9 +60,10 @@
 - title: Honors & Awards
   type: list
   contents:
-  - Winner of the Academic Excellence Gold Medal (WLU), 2025
-  - GSRDA Award (University of Waterloo), 2026
+  - AIES conference Student Program winner, 2026
+  - GSRDA Award x2 (University of Waterloo), 2026
   - Int'l Doctoral Student Award (University of Waterloo), 2025 – 2029
+  - Winner of the Academic Excellence Gold Medal (WLU), 2025
   - Graduate Scholarship (WLU), 2023 – 2025
   - Graduate Fellowship (WLU), 2023 – 2025
   - Differential Tuition Fee Waiver (WLU), 2023 – 2025
