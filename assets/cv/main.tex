@@ -1,368 +1,746 @@
-% --- LaTeX CV Template - S. Venkatraman ---
+%=====================================================================
+%  Majid Ghasemi -- Academic CV
+%  Minimal single-column layout. Compile with pdflatex.
+%=====================================================================
 
-% Set document class and font size
-\documentclass[letterpaper, 11pt]{article}
+\documentclass[letterpaper,11pt]{article}
+
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=0.95in,right=0.95in,top=0.85in,bottom=0.85in]{geometry}
 
-% Package imports
-\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace, hyperref}
-
-% --- Page layout settings ---
-
-% Set page margins
-\usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
-
-
-% Set line spacing
-\renewcommand{\baselinestretch}{1.15}
-
-% --- Page formatting ---
-
-% Set link colors
-\usepackage[dvipsnames]{xcolor}
-\hypersetup{
-  pdfborderstyle={/S/U/W 1}, % U = underline, W = line width
-  pdfborder={0 0 1},         % required by some viewers to show the line
-  linkbordercolor=black,
-  urlbordercolor=black,
-  citebordercolor=black
+% --- Fonts ---
+% Libertine if available, otherwise fall back to a close serif so the file
+% still compiles on a bare TeX installation or on Overleaf's minimal image.
+\IfFileExists{libertine.sty}{%
+  \usepackage{libertine}%
+  \IfFileExists{newtxmath.sty}{\usepackage[libertine]{newtxmath}}{}%
+}{%
+  \IfFileExists{newtxtext.sty}{\usepackage{newtxtext}\usepackage{newtxmath}}{%
+    \usepackage{mathpazo}}%
 }
 
-% Set font to Libertine, including math support
-\usepackage{libertine}
-\usepackage[libertine]{newtxmath}
-\usepackage[dvipsnames]{xcolor}
-\definecolor{crimson}{RGB}{220,20,60}
+% --- Layout helpers ---
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[hidelinks]{hyperref}
 
-% Remove page numbering
-\pagenumbering{gobble}
+\definecolor{accent}{RGB}{40,40,40}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
 
-% --- Document starts here ---
+\linespread{1.05}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% --- Section headings: small caps + full-width rule ---
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries\scshape}
+  {}{0em}{}
+  [\vspace{-0.65em}\rule{\textwidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{1.4em}{0.55em}
+
+% --- Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\footnotesize\itshape Majid Ghasemi \textperiodcentered\ \thepage\ of \pageref{LastPage}}
+
+% --- Entry macros ---
+% \role{bold left}{right-aligned}
+\newcommand{\role}[2]{\textbf{#1}\hfill{#2}\par}
+% \sub{left}{right-aligned italic}
+\newcommand{\sub}[2]{#1\hfill\textit{#2}\par}
+\newcommand{\gap}{\vspace{0.7em}}
+\newcommand{\me}{\underline{Majid Ghasemi}}
+
+% --- Publication lists, tiered labels ---
+\newlist{jlist}{enumerate}{1}
+\setlist[jlist]{label=[J\arabic*],leftmargin=2.6em,labelsep=0.6em,
+                itemsep=0.5em,topsep=0.35em,parsep=0pt}
+\newlist{clist}{enumerate}{1}
+\setlist[clist]{label=[C\arabic*],leftmargin=2.6em,labelsep=0.6em,
+                itemsep=0.5em,topsep=0.35em,parsep=0pt}
+\newlist{wlist}{enumerate}{1}
+\setlist[wlist]{label=[W\arabic*],leftmargin=2.6em,labelsep=0.6em,
+                itemsep=0.5em,topsep=0.35em,parsep=0pt}
+\newlist{plist}{enumerate}{1}
+\setlist[plist]{label=[P\arabic*],leftmargin=2.6em,labelsep=0.6em,
+                itemsep=0.5em,topsep=0.35em,parsep=0pt}
+\newlist{slist}{enumerate}{1}
+\setlist[slist]{label=[S\arabic*],leftmargin=2.6em,labelsep=0.6em,
+                itemsep=0.5em,topsep=0.35em,parsep=0pt}
+
+% Compact bullet list used inside experience entries
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.2em,itemsep=0.15em,topsep=0.2em,parsep=0pt,label=\textendash}
 
 \begin{document}
 
-% Name and date of last update to this document
-\noindent{\Huge{Majid Ghasemi}
-\hfill{\it\footnotesize Updated \today}}
-
-% --- Contact information and other items ---
-
-\vspace{0.5cm} 
+%=====================================================================
+%  HEADER
+%=====================================================================
 \begin{center}
-\begin{tabular}{lll}
-% Line 1: Email, GitHub, office location
-\textbf{Email}: majid.ghasemi@uwaterloo.ca      &
-\hspace{0.17in} \textbf{Scholar}: \href{https://scholar.google.com/citations?user=cHOAJEgAAAAJ&hl=en}{Google Scholar}    &
-\hspace{0.2in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/majiddghasemi/}{majiddghasemi} \\
-
-
-% Line 2: Phone number, LinkedIn, citizenship
-\textbf{Phone}: (437) 733-9113   & 
-% \hspace{0.55in} \textbf{LinkedIn}: //LinkedIn-URL   & 
-\hspace{0.4in} \textbf{Github}: \href{https://github.com/majidghassemi}{majidghassemi} 
-\end{tabular}
+  {\LARGE\bfseries Majid Ghasemi}\\[0.45em]
+  {\footnotesize
+   Ph.D.\ Student, Electrical \& Computer Engineering, University of Waterloo\\[0.35em]
+   \href{mailto:majid.ghasemi@uwaterloo.ca}{majid.ghasemi@uwaterloo.ca}
+   \ \textperiodcentered\
+   (437) 733-9113
+   \ \textperiodcentered\
+   \href{https://scholar.google.com/citations?user=cHOAJEgAAAAJ&hl=en}{Google Scholar}
+   \ \textperiodcentered\
+   \href{https://github.com/majidghassemi}{GitHub}
+   \ \textperiodcentered\
+   \href{https://www.linkedin.com/in/majiddghasemi/}{LinkedIn}
+  }
 \end{center}
+\vspace{0.5em}
+
+%=====================================================================
+\section{Research Interests}
+Social and multi-agent reinforcement learning, machine ethics, AI alignment. My work asks how
+ethical behaviour can be learned and transmitted between agents rather than hard-coded as a
+fixed reward.
+
+%=====================================================================
+\section{Education}
+
+\role{University of Waterloo}{Waterloo, ON, Canada}
+\sub{Ph.D., Electrical \& Computer Engineering}{Sep 2025 -- Present}
+Advisor: Mark Crowley\\
+Focus: ethical decision making in multi-agent systems and social learning as a route to it
+\gap
+
+\role{Wilfrid Laurier University}{Waterloo, ON, Canada}
+\sub{M.A.Sc., Applied Computing (GPA A+)}{Sep 2023 -- May 2025}
+Advisor: Dariush Ebrahimi\\
+Thesis: \textit{Reinforcement Learning for Scheduling and Routing: Electric Vehicle Charging and Patrol Scheduling}
+\gap
+
+\role{Imam Khomeini International University}{Qazvin, Iran}
+\sub{B.Sc., Software Engineering (GPA A--)}{Sep 2017 -- Mar 2022}
+Advisor: Mahdi Bahaghighat
+
+%=====================================================================
+\section{Publications}
+
+{\footnotesize\itshape Name underlined. Reverse chronological within each tier.}
+\vspace{0.4em}
+
+\textbf{\small Journal Articles}
+\begin{jlist}
+  \item \textbf{Real-Time Electric Vehicle Routing and Charging Optimization with Battery Life Consideration.}\\
+        Dariush Ebrahimi, \me, Mohammad Kashefi, Fadi Alzhouri.
+        \textit{IEEE Internet of Things Journal}, 2025.
+  \item \textbf{Citation Count Prediction Based on Google Scholar Profiles and Clarivate's Journal Citation Reports.}\\
+        Mahdi Bahaghighat, Leila Akbari, \me, Qin Xin.
+        \textit{Information Research}, 2023.
+  \item \textbf{A High-Accuracy Phishing Website Detection Method Based on Machine Learning.}\\
+        Mahdi Bahaghighat, \me, Figen Ozen.
+        \textit{Journal of Information Security and Applications}, vol.~77, 2023.
+\end{jlist}
+\gap
+
+\textbf{\small Peer-Reviewed Conference Papers}
+\begin{clist}
+  \item \textbf{Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response.}\\
+        \me, Dariush Ebrahimi.
+        \textit{IECON 2025, 51st Annual Conference of the IEEE Industrial Electronics Society}, 2025.
+  \item \textbf{Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety.}\\
+        \me, Ebrahim Sarkhouh, Fadi Alzhouri, Dariush Ebrahimi.
+        \textit{IEEE 34th International Symposium on Industrial Electronics (ISIE)}, 2025.
+  \item \textbf{Comparative Analysis of Reinforcement Learning for Reliable Real-Time EV Routing and Charging.}\\
+        \me, Fadi Alzhouri, Dariush Ebrahimi.
+        \textit{21st International Conference on the Design of Reliable Communication Networks (DRCN)}, 2025.
+  \item \textbf{Navigating Smart Order Routing in Fixed Income Trading with Linear Programming and Dijkstra's Algorithm.}\\
+        Cassel Robson, Marko Misic, Erika Capper, Mila Cvetanovska, \me, Fadi Alzhouri, Dariush Ebrahimi.
+        \textit{International Conference on the Dynamics of Information Systems}, 2024.
+\end{clist}
+\gap
+
+\textbf{\small Peer-Reviewed Workshop Papers}
+\begin{wlist}
+  \item \textbf{Learning When to Trust in Contextual Social Bandits.}\\
+        \me, Mark Crowley.
+        \textit{19th European Workshop on Reinforcement Learning (EWRL)}, 2026.
+  \item \textbf{Rethinking AI Alignment: From Static Rewards to Social Reinforcement Learning.}\\
+        \me, Mark Crowley.
+        \textit{Pluralistic Alignment Workshop, ICML}, 2026.
+  \item \textbf{Can Standard MARL Metrics Distinguish Communicative from Strategic Action?}\\
+        \me, Mark Crowley.
+        \textit{PhilML Workshop, ICML}, 2026.
+  \item \textbf{Toward Virtuous Reinforcement Learning: A Critique and Roadmap.}\\
+        \me, Mark Crowley.
+        \textit{Machine Ethics Workshop (From Formal Methods to Emergent Machine Ethics), AAAI}, 2026.
+\end{wlist}
+\gap
+
+% ---------------------------------------------------------------
+% UNDER REVIEW -- uncomment once you want these visible.
+% ---------------------------------------------------------------
+% \textbf{\small Under Review}
+% \begin{slist}
+%   \item \textbf{The Forager's Dilemma: Why Aligned AI Needs Both Laws and Social Friction.}\\
+%         \me, Mark Crowley.
+%         \textit{Under review, AAAI/ACM Conference on AI, Ethics, and Society (AIES)}, 2026.
+%   \item \textbf{Epistemic Source Alignment: Recovering Ground Truth from Sycophantic Majorities in Social Reinforcement Learning.}\\
+%         \me, Mark Crowley.
+%         \textit{Under review, AAAI/ACM Conference on AI, Ethics, and Society (AIES)}, 2026.
+% \end{slist}
+% \gap
+
+\textbf{\small Preprints and Technical Reports}
+\begin{plist}
+  \item \textbf{Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges.}\\
+        \me, Amirhossein Mousavi, Dariush Ebrahimi.
+        \textit{arXiv preprint}, 2024.
+  \item \textbf{Introduction to Reinforcement Learning.}\\
+        \me, Dariush Ebrahimi.
+        \textit{arXiv preprint}, 2024.
+\end{plist}
+
+%=====================================================================
+\section{Honours and Awards}
+
+\sub{AIES Student Program Scholarship and Award}{2026}
+\sub{Graduate Student Research and Development Award ($\times$2), University of Waterloo}{2026}
+\sub{International Doctoral Student Award, University of Waterloo}{2025 -- 2029}
+\sub{Academic Excellence Gold Medal, Wilfrid Laurier University}{2025}
+\sub{Graduate Scholarship, Wilfrid Laurier University}{2023 -- 2025}
+\sub{Graduate Fellowship, Wilfrid Laurier University}{2023 -- 2025}
+\sub{Differential Tuition Fee Waiver, Wilfrid Laurier University}{2023 -- 2025}
+\sub{Excellence Students Tuition Fee Waiver, Imam Khomeini Intl.\ University}{2017 -- 2022}
+
+%=====================================================================
+\section{Grants}
+
+\role{HU University of Applied Sciences Utrecht}{Aug 2022 -- Aug 2023}
+Research grant to study the Woman, Life, Freedom movement in Iran using computational social
+science and machine learning methods.
+
+%=====================================================================
+\section{Research Experience}
+
+\role{UWECEML / CompThink Lab, University of Waterloo}{Sep 2025 -- Present}
+\textit{Graduate Researcher, advised by Mark Crowley}
+\begin{tight}
+  \item Developing socially informed and ethically grounded methods for multi-agent reinforcement learning.
+  \item Work spans virtue transmission in sequential social dilemmas, contextual bandits with strategic feedback, and constrained ethical agent design.
+\end{tight}
+\gap
+
+\role{Edge Computing Lab, Wilfrid Laurier University}{Sep 2023 -- May 2025}
+\textit{Graduate Researcher, advised by Dariush Ebrahimi}
+\begin{tight}
+  \item Reinforcement learning for intelligent transportation, focusing on EV fleet management, routing, and charging optimization.
+  \item Developed exact and heuristic baselines for urban patrol scheduling under dynamic demand.
+\end{tight}
+\gap
+
+\role{AIST Lab, Imam Khomeini International University}{Jan 2021 -- Mar 2022}
+\textit{Undergraduate Researcher, advised by Mahdi Bahaghighat}
+\begin{tight}
+  \item Machine learning methods for phishing website detection.
+\end{tight}
+
+%=====================================================================
+\section{Industry Experience}
+
+\role{Kisoji Biotechnology Inc.}{Waterloo, ON, Canada}
+\sub{AI Research Intern, Machine Learning Department}{May 2026 -- Present}
+\begin{tight}
+  \item Building the Expressibility Engine, a three-module system for antibody expression optimization.
+  \item Domain-adaptive prediction with Bayesian project embeddings; RL-guided experimental design using GRPO with DPP-based diversity; sparse graph-based causal driver discovery.
+  \item Reduces wet-lab iteration through active learning while producing interpretable guidance for antibody engineers.
+\end{tight}
+
+%=====================================================================
+\section{Invited Talks and Presentations}
+
+\sub{Designing Virtuous Agents with Reinforcement Learning, Formal Ethics 2026, Buffalo, USA}{Jul 2026}
+\sub{Optimal and Heuristic Solutions for Vehicle Patrol Scheduling, IEEE ISIE 2025}{Jun 2025}
+
+%=====================================================================
+\section{Teaching Experience}
+
+\role{Teaching Assistant}{2021 -- Present}
+\begin{tight}
+  \item \textbf{University of Waterloo:} ECE108 Discrete Mathematics and Logic (S26), ECE406 Algorithm Design and Analysis (W26), ECE250 Data Structures and Algorithms, tutor (F25).
+  \item \textbf{Wilfrid Laurier University:} CP468 Artificial Intelligence (F23, F24, W25), CP421 Data Mining (W24), CP312 Algorithm Design and Analysis (W24).
+  \item \textbf{Imam Khomeini Intl.\ University:} Artificial Intelligence, Data Mining, Fundamentals of Programming (2021 -- 2022).
+  \item Guest lectured selected topics, authored quizzes and project specifications, designed and evaluated term projects, and held regular office hours.
+\end{tight}
+
+%=====================================================================
+\section{Academic Service}
+
+\role{Program Committee}{}
+\begin{tight}
+  \item AAAI/ACM Conference on AI, Ethics, and Society (AIES), 2026
+\end{tight}
+\vspace{0.4em}
+\role{Reviewer}{}
+\begin{tight}
+  \item Reinforcement Learning in Big Worlds Workshop, Reinforcement Learning Conference (RLC), 2026
+  \item PhilML Workshop, ICML 2026
+  \item Pluralistic Alignment Workshop, ICML 2026
+  \item Post-AGI Science and Society (P-AGI) Workshop, ICLR 2026
+  \item IEEE Canadian Journal of Electrical \& Computer Engineering (CJECE)
+  \item ACM Transactions on Intelligent Systems and Technology (TIST)
+\end{tight}
+
+%=====================================================================
+\section{Technical Skills}
+
+\textbf{Languages:} Python, C++, JavaScript, HTML/CSS\\
+\textbf{ML frameworks:} PyTorch, JAX, TensorFlow\\
+\textbf{Scientific stack:} NumPy, Pandas, Matplotlib\\
+\textbf{Spoken languages:} English (fluent), Persian (native), Azeri (native)
 
-% --- Start the two-column table storing the main content ---
-
-% Set spacing between columns
-\setlength{\tabcolsep}{8pt}
-
-% Set the width of each column
-\begin{longtable}{p{1.3in}p{4.8in}}
-
-% --- Section: Research interests ---
-
-\nohyphens{\color{crimson}{Research interests}}
-& Social Reinforcement Learning, Multi-agent Reinforcement Learning, Machine Ethics, AI Alignment, and AI Ethics \\
-& \\
-
-% --- Section: Education ---
-
-\color{blue}{Education} 
-& \textbf{University of Waterloo} \hfill Waterloo, ON, Canada \\ 
-& \textbf{Ph.D.} in Electrical \& Computer Engineering \hfill Sep 2025 -- Present \\
-& Supervised by Mark Crowley\\
-& Research area: {\it Ethical decision making in multi-agent systems and how social learning can be a way to achieve it}\\
-& \\
-
-& \textbf{Wilfrid Laurier University (WLU)} \hfill Waterloo, ON, Canada \\
-& \textbf{MASc} in Applied Computing \hfill Sep 2023 -- May 2025\\
-& Supervised by Dariush Ebrahimi. {\it GPA: A+.}\\
-& Thesis title: {\it Reinforcement Learning for Scheduling and Routing: Electric Vehicles Charging and Patrol Scheduling}\\
-& \\
-
-& \textbf{Imam Khomeini Intl. University (IKIU)} \hfill Qazvin, Iran\\
-& B.Sc. in Software Engineering \hfill Sep 2017 -- March 2022 \\
-& Supervised by Mahdi Bahaghighat. {\it GPA: A-.}\\
-& \\
-
-% --- Uncomment the next few lines if you want to include some courses ---
-%& \textbf{Selected coursework}
-%\begin{itemize}[noitemsep,leftmargin=*]
-%\item \underline{Relevant subject 1}: Course 1, Course 2, Course 3, Course 4
-%\item \underline{Relevant subject 2}: Course 1, Course 2, Course 3, Course 4
-%\end{itemize} \\
-
-% --- Section: Awards, scholarships, etc. ---
-% --- Note: section title is spread over two lines ---
-
-
-% --- Section: Publications ---
-\nohyphens{\color{crimson}{Publications}} 
-% & For a list of publications, refer to \href{https://scholar.google.com/citations?user=cHOAJEgAAAAJ&hl=en}{Google Scholar}\\
-& \textbf{Learning When to Trust in Contextual Social Bandits} \\
-& {\it Majid Ghasemi}, and Mark Crowley. \\
-& \textit{19th European Workshop on Reinforcement Learning}\\
-& \textbf{Real-Time Electric Vehicle Routing and Charging Optimization with Battery Life Consideration} \\
-& Dariush Ebrahimi, {\it Majid Ghasemi}, Mohammad Kashefi, and Fadi Alzhouri. \\
-& \textit{Internet of Things journal}\\
-& \textbf{Rethinking AI Alignment: From Static Rewards to Social Reinforcement Learning} \\
-& {\it Majid Ghasemi}, and Mark Crowley. \\
-& \textit{ICML 2026 Pluralistic ALignment Workshop}\\
-& \textbf{Can Standard MARL Metrics Distinguish Communicative from Strategic Action?} \\
-& {\it Majid Ghasemi}, and Mark Crowley. \\
-& \textit{ICML 2026 PhilML Workshop}\\
-% & \textbf{The Forager's Dilemma: Why Aligned AI Needs Both Laws and Social Friction} \\
-% & {\it Majid Ghasemi}, and Mark Crowley. \\
-% & \textit{Submitted to AAAI/ACM Conference on AI, Ethics, and Society (AIES}\\
-% & \textbf{Epistemic Source Alignment: Recovering Ground Truth from Sycophantic Majorities in Social Reinforcement Learning} \\
-% & {\it Majid Ghasemi}, and Mark Crowley. \\
-% & \textit{Submitted to AAAI/ACM Conference on AI, Ethics, and Society (AIES}\\
-& \textbf{Citation count prediction based on Google Scholar profiles and Clarivate’s journal citation reports} \\
-& Mahdi Bahaghighat, Leila Akbari, {\it Majid Ghasemi}, and Qin Xin. \\
-& \textit{Information Research journal}\\
-& \\
-& \textbf{Toward Virtuous Reinforcement Learning: A Critique and Roadmap} \\
-& {\it Majid Ghasemi}, and Mark Crowley. \\
-& \textit{Machine Ethics: from formal methods to emergent machine ethics workshop at the AAAI conference}\\
-& \\
-& \textbf{Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response} \\
-& {\it Majid Ghasemi}, and Dariush Ebrahimi. \\
-& \textit{IECON 2025 – 51st Annual Conference of the IEEE Industrial Electronics Society.}\\
-& \\
-
-& \textbf{Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety} \\
-& {\it Majid Ghasemi}, Ebrahim Sarkhouh, Fadi Alzhouri, and Dariush Ebrahimi. \\
-& \textit{2025 IEEE 34th International Symposium on Industrial Electronics (ISIE).}\\
-& \\
-
-& \textbf{Comparative Analysis of Reinforcement Learning for Reliable Real-Time EV Routing and Charging} \\
-& {\it Majid Ghasemi}, Fadi Alzhouri, and Dariush Ebrahimi. \\
-& \textit{2025 21st International Conference on the Design of Reliable Communication Networks (DRCN).}\\
-& \\
-
-& \textbf{Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges} \\
-& {\it Majid Ghasemi}, Amirhossein Mousavi, and Dariush Ebrahimi. \\
-& \textit{Preprint on Arxiv.}\\
-& \\
-
-& \textbf{Introduction to Reinforcement Learning} \\
-& {\it Majid Ghasemi}, and Dariush Ebrahimi. \\
-& \textit{Preprint on Arxiv.}\\
-& \\
-
-& \textbf{Navigating Smart Order Routing in Fixed Income Trading with Linear Programming and Dijkstra’s Algorithm} \\
-& Cassel Robson, Marko Misic, Erika Capper, Mila Cvetanovska, {\it Majid Ghasemi}, Fadi Alzhouri, and Dariush Ebrahimi. \\
-& \textit{2024 International Conference on the Dynamics of Information Systems.}\\
-& \\
-
-& \textbf{A high-accuracy phishing website detection method based on machine learning} \\
-& Mahdi Bahaghighat, {\it Majid Ghasemi}, and Figen Ozen. \\
-& \textit{Journal of Information Security and Applications 77.}\\
-& \\
-
-
-
-
-{\color{blue}{Honors and}} 
-& AIES conference Student Program winner \hfill 2026\\
-{\color{blue}{scholarships}} 
-& GSRDA Award x2 (University of Waterloo)\hfill  2026 \\
-& Int'l Doctoral Student Award (University of Waterloo)\hfill 2025 -- 2029 \\
-& Winner of the Academic Excellence Gold Medal (WLU) \hfill 2025\\
-& Graduate Scholarship (WLU)\hfill 2023 -- 2025 \\
-& Graduate Fellowship (WLU)\hfill 2023 -- 2025 \\
-& Differential Tuition Fee Waiver (WLU)\hfill 2023 -- 2025 \\
-& Excellence Students Tuition Fee Waiver (IKIU) \hfill 2017--2022 \\
-& \\
-
-% --- Section: Research experience ---
-
-\nohyphens{\color{crimson}{Research experience}} 
-& \textbf{UWECEML/CompThink lab} \\
-& Supervisor: Prof. Mark Crowley (University of Waterloo) \hfill Sep 2025 -- Present \\
-& Developing socially informed and ethically grounded approaches to multi-agent reinforcement learning. \\
-& \\
-
-& \textbf{Edge Computing lab} \\
-& Supervisor: Dr. Dariush Ebrahimi (WLU) \hfill Sep 2023 -- May 2025 \\
-& Conducted research on reinforcement learning for intelligent transportation systems, focusing on EV fleet management and routing optimization. \\
-& \\
-
-& \textbf{AIST lab} \\
-& Supervisor: Dr. Mahdi Bahaghighat (IKIU) \hfill Sep Jan. 2021 -- March 2022 \\
-& Researched on phishing website detection with machine learning. \\
-& \\
-
-% --- Section: Teaching experience ---
-
-{\color{blue}{Teaching experience}} 
-% & \textbf{Tutor} \hfill Fall 2025 \\
-% & ECE250: Data Structures \& Algorithm \\
-% & Delivering 1:1 tutoring sessions to students teaching the fundamentals \\
-% & \\
-
-& \textbf{Teaching Assistant, IKIU, WLU, and UW} \hfill 2023-Present \\
-& Courses including AI, Data Mining, Algorithm Design and Analysis, and Discrete Mathematics \\
-& \\
-
-% & \textbf{Teaching Assistant, ECE Department (UW)} \hfill Spring 2026 \\
-% & ECE108: Discrete Mathematics and Logic \\
-% & \\
-
-% & \textbf{Teaching Assistant, ECE Department (UW)} \hfill Winter 2026 \\
-% & ECE406: Algorithm Design and Analysis \\
-% & \\
-
-% & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Winter 2025 \\
-% & CP468: Artificial Intelligence \\
-% & Guest-lectured selected topics; authored/marked quizzes; defined and evaluated term projects; maintained office hours and discussion support. \\
-% & \\
-
-% & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Fall 2024 \\
-% & CP468: Artificial Intelligence \\
-% & Facilitated weekly tutorials; prepared assessments; graded assignments/exams; provided 1:1 support on foundational AI methods. \\
-% & \\
-
-% & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Winter 2024 \\
-% & CP312: Algorithm Design and Analysis \\
-% & Ran problem-solving sessions; authored quiz questions; evaluated projects and papers; supported students on time/space analysis and classic algorithms. \\
-% & \\
-
-% & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Winter 2024 \\
-% & CP421: Data Mining \\
-% & Delivered labs; set and marked quizzes; defined/evaluated course projects; supported students with data prep and model evaluation workflows. \\
-% & \\
-
-% & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Fall 2023 \\
-% & CP468: Artificial Intelligence \\
-% & Led tutorials and occasional lectures; created quizzes and project specs; graded assignments/exams; held office hours for core AI topics. \\
-% & \\
-
-% & \textbf{Teaching Assistant, Department of Computer Engineering (IKIU)} \hfill Winter 2022 \\
-% & Fundamentals of Programming \\
-% & Led labs and tutorials; crafted quizzes and programming assignments; graded submissions and exams; supported students in core programming concepts. \\
-% & \\
-
-% & \textbf{Teaching Assistant, Department of Computer Engineering (IKIU)} \hfill Fall 2021 \\
-% & Artificial Intelligence \\
-% & Conducted tutorials; designed quizzes and project briefs; graded assignments/exams; provided office-hour support throughout the term. \\
-% & \\
-
-% & \textbf{Teaching Assistant, Department of Computer Engineering (IKIU)} \hfill Fall 2021 \\
-% & Data Mining \\
-% & Delivered practical sessions; set/marked assessments; defined and evaluated term projects; guided students on end-to-end analytics pipelines. \\
-% & \\
-
-
-% --- Section: Industry experience ---
-
-{\color{crimson}{Industry experience}} 
-
-& {\textbf{Kisoji Biotechnology Inc.,}} Machine Learning Department \hfill Waterloo, ON, Canada\\
-& AI Research Intern \hfill May 2026 -- Present \\
-& Currently building the Expressibility Engine — a 3-module system for antibody expression optimization: domain-adaptive prediction with Bayesian project embeddings, RL-guided experimental design (GRPO + DPP diversity), and sparse graph-based causal driver discovery. Reduces wet-lab rounds via active learning while providing interpretable guidance for antibody engineers.\\
-& \\
-
-
-% & {\textbf{Gerdoo Software,}} AI Department \hfill Tehran, Iran\\
-% & Junior Data Scientist \hfill June 2022 -- June 2023 \\
-% & Built and maintained SQL pipelines to extract, clean, and aggregate data; performed exploratory analysis and market research to surface trends; and developed baseline ML models for segmentation and forecasting. Partnered with product and marketing to turn insights into decisions, and delivered concise KPI dashboards and reports for stakeholders.\\
-% & \\
- 
-% & {\textbf{Marketing Camp,}} Software Department \hfill Alborz, Iran\\
-% & Frontend Developer \hfill Dec 2018 -- May 2019 \\
-% & As part of the technical team, I helped plan and deliver the Winter Marketing Camp (WinterMC) in February 2019. We built and deployed a web application for participant registration and curated participant profiles, and implemented a real-time, team-based leaderboard that displayed scores and rankings throughout the event.\\
-% & \\
-
-% & {\textbf{TestHub,}} Software Department \hfill Alborz, Iran\\
-% & Frontend Developer \hfill May 2018 -- Nov 2018 \\
-% & We explored forward-leaning concepts, including applying artificial intelligence to retail recommender systems, while I concurrently developed responsive admin panels and user dashboards using JavaScript, HTML, and CSS.\\
-% & \\
-
-
-{\color{crimson}{Service to the Community}} 
-& \textbf{(\texttt{R}) Stands for Reviewer, (\texttt{PC}) stands for Program Committee}\\
-& (\texttt{PC}) AAAI/ACM Conference on AI, Ethics, and Philosophy (AIES) 2026 \\
-& (\texttt{R}) Reinforcement Learning in Big Worlds at Reinforcement Learning Conference (RLC) 2026 \\
-& (\texttt{R}) PhilML Workshop at ICML 2026 \\
-& (\texttt{R}) Pluralistic Alignment Workshop at ICML 2026 \\
-& (\texttt{R}) Post-AGI Science and Society (P-AGI) Workshop at ICLR 2026 \\
-& (\texttt{R}) IEEE Canadian Journal of Electrical \& Computer Engineering (CJECE) \\
-& (\texttt{R}) ACM Transactions on Intelligent Systems and Technology \\
-& \\
-
-
-
-
-% --- Section: Talks and tutorials ---
-
-% {\color{blue}{Talks and presentations}} 
-% & \textbf{Designing virtuous agents with Reinforcement Learning} \hfill July 2026 \\
-% & Formal Ethics 2026, Buffalo, USA (Presentation) \\
-% & \\
-% & \textbf{Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety} \hfill June 2025 \\
-% & 2025 IEEE 34th International Symposium on Industrial Electronics (ISIE) (Talk and Presentation) \\
-% & \\
-
-% & \textbf{Title of your second most recent presentation} \hfill Month Year \\
-% & Name of conference, workshop, seminar, venue, etc., or a description \\
-% & \\
-
-% --- Section: Various skills (programming, software, languages, etc.) ---
-
-
-
-% {\color{blue}{Skills}} 
-% & \textbf{Programming}\\
-% & Proficient in: Python, JAX, C++, Pytorch, Tensorflow, Javascript, Numpy, Pandas, Matplotlib, and HTML/CSS. \\
-% & \\
-
-% & \textbf{Languages} \\
-% & English (fluent), Persian (native), and Azeri (native) \\
-% & \\
-
-% --- Section: Service and outreach ---
-
-% \color{Black}{Service and outreach}
-% & \textbf{Title of organization you were in} \hfill Month Year -- Month Year \\
-% & Description of your responsibilities. Integer pretium semper justo. Proin risus. Aliquam volutpat est vel massa. \\
-% & \\
-
-% --- Section: Professional society memberships ---
-% --- Note: section title is spread over two lines ---
-
-% {\color{Black}{Professional}} 
-% & {\textbf{Name of professional society.}} \hfill Month Year -- Present \\
-% {\color{Black}{memberships}} 
-% & Some things you did or conferences you attended. Aliquam volutpat est vel massa. Sed dolor lacus, imperdiet non, ornare non, commodo eu, neque. \\
-% & \\
-
-
-% \color{crimson}{Mentorship}
-% & \textbf{Academic Mentor} \hfill Aug. 2025 -- Present \\
-% & Offering free 1:1 academic and career mentorship to students. This initiative was started by me to support students from underrepresented backgrounds. Currently mentoring one student\\
-% & \\
-
-% --- Section: Other interests/hobbies ---
-
-\color{blue}{Grants}
-& \textbf{HU University of Applied Sciences Utrecht} \hfill Aug. 2022 -- Aug. 2023 \\
-& Recipient of a grant to conduct research on Woman, Life, Freedom movement in Iran with computational social science and machine learning approaches. 
-% We categorized tweets published on X(former Twitter) with clustering techniques.\\
-
-% --- End of CV! ---
-
-\end{longtable}
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+% % --- LaTeX CV Template - S. Venkatraman ---
+
+% % Set document class and font size
+% \documentclass[letterpaper, 11pt]{article}
+% \usepackage[utf8]{inputenc}
+
+% % Package imports
+% \usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace, hyperref}
+
+% % --- Page layout settings ---
+
+% % Set page margins
+% \usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
+
+
+% % Set line spacing
+% \renewcommand{\baselinestretch}{1.15}
+
+% % --- Page formatting ---
+
+% % Set link colors
+% \usepackage[dvipsnames]{xcolor}
+% \hypersetup{
+%   pdfborderstyle={/S/U/W 1}, % U = underline, W = line width
+%   pdfborder={0 0 1},         % required by some viewers to show the line
+%   linkbordercolor=black,
+%   urlbordercolor=black,
+%   citebordercolor=black
+% }
+
+% % Set font to Libertine, including math support
+% \usepackage{libertine}
+% \usepackage[libertine]{newtxmath}
+% \usepackage[dvipsnames]{xcolor}
+% \definecolor{crimson}{RGB}{220,20,60}
+
+% % Remove page numbering
+% \pagenumbering{gobble}
+
+% % --- Document starts here ---
+
+% \begin{document}
+
+% % Name and date of last update to this document
+% \noindent{\Huge{Majid Ghasemi}
+% \hfill{\it\footnotesize Updated \today}}
+
+% % --- Contact information and other items ---
+
+% \vspace{0.5cm} 
+% \begin{center}
+% \begin{tabular}{lll}
+% % Line 1: Email, GitHub, office location
+% \textbf{Email}: majid.ghasemi@uwaterloo.ca      &
+% \hspace{0.17in} \textbf{Scholar}: \href{https://scholar.google.com/citations?user=cHOAJEgAAAAJ&hl=en}{Google Scholar}    &
+% \hspace{0.2in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/majiddghasemi/}{majiddghasemi} \\
+
+
+% % Line 2: Phone number, LinkedIn, citizenship
+% \textbf{Phone}: (437) 733-9113   & 
+% % \hspace{0.55in} \textbf{LinkedIn}: //LinkedIn-URL   & 
+% \hspace{0.4in} \textbf{Github}: \href{https://github.com/majidghassemi}{majidghassemi} 
+% \end{tabular}
+% \end{center}
+
+% % --- Start the two-column table storing the main content ---
+
+% % Set spacing between columns
+% \setlength{\tabcolsep}{8pt}
+
+% % Set the width of each column
+% \begin{longtable}{p{1.3in}p{4.8in}}
+
+% % --- Section: Research interests ---
+
+% \nohyphens{\color{crimson}{Research interests}}
+% & Social Reinforcement Learning, Multi-agent Reinforcement Learning, Machine Ethics, AI Alignment, and AI Ethics \\
+% & \\
+
+% % --- Section: Education ---
+
+% \color{blue}{Education} 
+% & \textbf{University of Waterloo} \hfill Waterloo, ON, Canada \\ 
+% & \textbf{Ph.D.} in Electrical \& Computer Engineering \hfill Sep 2025 -- Present \\
+% & Supervised by Mark Crowley\\
+% & Research area: {\it Ethical decision making in multi-agent systems and how social learning can be a way to achieve it}\\
+% & \\
+
+% & \textbf{Wilfrid Laurier University (WLU)} \hfill Waterloo, ON, Canada \\
+% & \textbf{MASc} in Applied Computing \hfill Sep 2023 -- May 2025\\
+% & Supervised by Dariush Ebrahimi. {\it GPA: A+.}\\
+% & Thesis title: {\it Reinforcement Learning for Scheduling and Routing: Electric Vehicles Charging and Patrol Scheduling}\\
+% & \\
+
+% & \textbf{Imam Khomeini Intl. University (IKIU)} \hfill Qazvin, Iran\\
+% & B.Sc. in Software Engineering \hfill Sep 2017 -- March 2022 \\
+% & Supervised by Mahdi Bahaghighat. {\it GPA: A-.}\\
+% & \\
+
+% % --- Uncomment the next few lines if you want to include some courses ---
+% %& \textbf{Selected coursework}
+% %\begin{itemize}[noitemsep,leftmargin=*]
+% %\item \underline{Relevant subject 1}: Course 1, Course 2, Course 3, Course 4
+% %\item \underline{Relevant subject 2}: Course 1, Course 2, Course 3, Course 4
+% %\end{itemize} \\
+
+% % --- Section: Awards, scholarships, etc. ---
+% % --- Note: section title is spread over two lines ---
+
+
+% % --- Section: Publications ---
+% \nohyphens{\color{crimson}{Publications}} 
+% % & For a list of publications, refer to \href{https://scholar.google.com/citations?user=cHOAJEgAAAAJ&hl=en}{Google Scholar}\\
+% & \textbf{Learning When to Trust in Contextual Social Bandits} \\
+% & {\it Majid Ghasemi}, and Mark Crowley. \\
+% & \textit{19th European Workshop on Reinforcement Learning}\\
+% & \textbf{Real-Time Electric Vehicle Routing and Charging Optimization with Battery Life Consideration} \\
+% & Dariush Ebrahimi, {\it Majid Ghasemi}, Mohammad Kashefi, and Fadi Alzhouri. \\
+% & \textit{Internet of Things journal}\\
+% & \textbf{Rethinking AI Alignment: From Static Rewards to Social Reinforcement Learning} \\
+% & {\it Majid Ghasemi}, and Mark Crowley. \\
+% & \textit{ICML 2026 Pluralistic ALignment Workshop}\\
+% & \textbf{Can Standard MARL Metrics Distinguish Communicative from Strategic Action?} \\
+% & {\it Majid Ghasemi}, and Mark Crowley. \\
+% & \textit{ICML 2026 PhilML Workshop}\\
+% % & \textbf{The Forager's Dilemma: Why Aligned AI Needs Both Laws and Social Friction} \\
+% % & {\it Majid Ghasemi}, and Mark Crowley. \\
+% % & \textit{Submitted to AAAI/ACM Conference on AI, Ethics, and Society (AIES}\\
+% % & \textbf{Epistemic Source Alignment: Recovering Ground Truth from Sycophantic Majorities in Social Reinforcement Learning} \\
+% % & {\it Majid Ghasemi}, and Mark Crowley. \\
+% % & \textit{Submitted to AAAI/ACM Conference on AI, Ethics, and Society (AIES}\\
+% & \textbf{Citation count prediction based on Google Scholar profiles and Clarivate’s journal citation reports} \\
+% & Mahdi Bahaghighat, Leila Akbari, {\it Majid Ghasemi}, and Qin Xin. \\
+% & \textit{Information Research journal}\\
+% & \\
+% & \textbf{Toward Virtuous Reinforcement Learning: A Critique and Roadmap} \\
+% & {\it Majid Ghasemi}, and Mark Crowley. \\
+% & \textit{Machine Ethics: from formal methods to emergent machine ethics workshop at the AAAI conference}\\
+% & \\
+% & \textbf{Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response} \\
+% & {\it Majid Ghasemi}, and Dariush Ebrahimi. \\
+% & \textit{IECON 2025 – 51st Annual Conference of the IEEE Industrial Electronics Society.}\\
+% & \\
+
+% & \textbf{Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety} \\
+% & {\it Majid Ghasemi}, Ebrahim Sarkhouh, Fadi Alzhouri, and Dariush Ebrahimi. \\
+% & \textit{2025 IEEE 34th International Symposium on Industrial Electronics (ISIE).}\\
+% & \\
+
+% & \textbf{Comparative Analysis of Reinforcement Learning for Reliable Real-Time EV Routing and Charging} \\
+% & {\it Majid Ghasemi}, Fadi Alzhouri, and Dariush Ebrahimi. \\
+% & \textit{2025 21st International Conference on the Design of Reliable Communication Networks (DRCN).}\\
+% & \\
+
+% & \textbf{Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges} \\
+% & {\it Majid Ghasemi}, Amirhossein Mousavi, and Dariush Ebrahimi. \\
+% & \textit{Preprint on Arxiv.}\\
+% & \\
+
+% & \textbf{Introduction to Reinforcement Learning} \\
+% & {\it Majid Ghasemi}, and Dariush Ebrahimi. \\
+% & \textit{Preprint on Arxiv.}\\
+% & \\
+
+% & \textbf{Navigating Smart Order Routing in Fixed Income Trading with Linear Programming and Dijkstra’s Algorithm} \\
+% & Cassel Robson, Marko Misic, Erika Capper, Mila Cvetanovska, {\it Majid Ghasemi}, Fadi Alzhouri, and Dariush Ebrahimi. \\
+% & \textit{2024 International Conference on the Dynamics of Information Systems.}\\
+% & \\
+
+% & \textbf{A high-accuracy phishing website detection method based on machine learning} \\
+% & Mahdi Bahaghighat, {\it Majid Ghasemi}, and Figen Ozen. \\
+% & \textit{Journal of Information Security and Applications 77.}\\
+% & \\
+
+
+
+
+% {\color{blue}{Honors and}} 
+% & AIES conference Student Program Scholarship \& Award winner \hfill 2026\\
+% {\color{blue}{scholarships}} 
+% & GSRDA Award x2 (University of Waterloo)\hfill  2026 \\
+% & Int'l Doctoral Student Award (University of Waterloo)\hfill 2025 -- 2029 \\
+% & Winner of the Academic Excellence Gold Medal (WLU) \hfill 2025\\
+% & Graduate Scholarship (WLU)\hfill 2023 -- 2025 \\
+% & Graduate Fellowship (WLU)\hfill 2023 -- 2025 \\
+% & Differential Tuition Fee Waiver (WLU)\hfill 2023 -- 2025 \\
+% & Excellence Students Tuition Fee Waiver (IKIU) \hfill 2017--2022 \\
+% & \\
+
+% % --- Section: Research experience ---
+
+% \nohyphens{\color{crimson}{Research experience}} 
+% & \textbf{UWECEML/CompThink lab} \\
+% & Supervisor: Prof. Mark Crowley (University of Waterloo) \hfill Sep 2025 -- Present \\
+% & Developing socially informed and ethically grounded approaches to multi-agent reinforcement learning. \\
+% & \\
+
+% & \textbf{Edge Computing lab} \\
+% & Supervisor: Dr. Dariush Ebrahimi (WLU) \hfill Sep 2023 -- May 2025 \\
+% & Conducted research on reinforcement learning for intelligent transportation systems, focusing on EV fleet management and routing optimization. \\
+% & \\
+
+% & \textbf{AIST lab} \\
+% & Supervisor: Dr. Mahdi Bahaghighat (IKIU) \hfill Sep Jan. 2021 -- March 2022 \\
+% & Researched on phishing website detection with machine learning. \\
+% & \\
+
+% % --- Section: Teaching experience ---
+
+% {\color{blue}{Teaching experience}} 
+% % & \textbf{Tutor} \hfill Fall 2025 \\
+% % & ECE250: Data Structures \& Algorithm \\
+% % & Delivering 1:1 tutoring sessions to students teaching the fundamentals \\
+% % & \\
+
+% & \textbf{Teaching Assistant, IKIU, WLU, and UW} \hfill 2023-Present \\
+% & Courses including AI, Data Mining, Algorithm Design and Analysis, and Discrete Mathematics \\
+% & \\
+
+% % & \textbf{Teaching Assistant, ECE Department (UW)} \hfill Spring 2026 \\
+% % & ECE108: Discrete Mathematics and Logic \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, ECE Department (UW)} \hfill Winter 2026 \\
+% % & ECE406: Algorithm Design and Analysis \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Winter 2025 \\
+% % & CP468: Artificial Intelligence \\
+% % & Guest-lectured selected topics; authored/marked quizzes; defined and evaluated term projects; maintained office hours and discussion support. \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Fall 2024 \\
+% % & CP468: Artificial Intelligence \\
+% % & Facilitated weekly tutorials; prepared assessments; graded assignments/exams; provided 1:1 support on foundational AI methods. \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Winter 2024 \\
+% % & CP312: Algorithm Design and Analysis \\
+% % & Ran problem-solving sessions; authored quiz questions; evaluated projects and papers; supported students on time/space analysis and classic algorithms. \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Winter 2024 \\
+% % & CP421: Data Mining \\
+% % & Delivered labs; set and marked quizzes; defined/evaluated course projects; supported students with data prep and model evaluation workflows. \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, Department of Computer Science (WLU)} \hfill Fall 2023 \\
+% % & CP468: Artificial Intelligence \\
+% % & Led tutorials and occasional lectures; created quizzes and project specs; graded assignments/exams; held office hours for core AI topics. \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, Department of Computer Engineering (IKIU)} \hfill Winter 2022 \\
+% % & Fundamentals of Programming \\
+% % & Led labs and tutorials; crafted quizzes and programming assignments; graded submissions and exams; supported students in core programming concepts. \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, Department of Computer Engineering (IKIU)} \hfill Fall 2021 \\
+% % & Artificial Intelligence \\
+% % & Conducted tutorials; designed quizzes and project briefs; graded assignments/exams; provided office-hour support throughout the term. \\
+% % & \\
+
+% % & \textbf{Teaching Assistant, Department of Computer Engineering (IKIU)} \hfill Fall 2021 \\
+% % & Data Mining \\
+% % & Delivered practical sessions; set/marked assessments; defined and evaluated term projects; guided students on end-to-end analytics pipelines. \\
+% % & \\
+
+
+% % --- Section: Industry experience ---
+
+% {\color{crimson}{Industry experience}} 
+
+% & {\textbf{Kisoji Biotechnology Inc.,}} Machine Learning Department \hfill Waterloo, ON, Canada\\
+% & AI Research Intern \hfill May 2026 -- Present \\
+% & Currently building the Expressibility Engine — a 3-module system for antibody expression optimization: domain-adaptive prediction with Bayesian project embeddings, RL-guided experimental design (GRPO + DPP diversity), and sparse graph-based causal driver discovery. Reduces wet-lab rounds via active learning while providing interpretable guidance for antibody engineers.\\
+% & \\
+
+
+% % & {\textbf{Gerdoo Software,}} AI Department \hfill Tehran, Iran\\
+% % & Junior Data Scientist \hfill June 2022 -- June 2023 \\
+% % & Built and maintained SQL pipelines to extract, clean, and aggregate data; performed exploratory analysis and market research to surface trends; and developed baseline ML models for segmentation and forecasting. Partnered with product and marketing to turn insights into decisions, and delivered concise KPI dashboards and reports for stakeholders.\\
+% % & \\
+ 
+% % & {\textbf{Marketing Camp,}} Software Department \hfill Alborz, Iran\\
+% % & Frontend Developer \hfill Dec 2018 -- May 2019 \\
+% % & As part of the technical team, I helped plan and deliver the Winter Marketing Camp (WinterMC) in February 2019. We built and deployed a web application for participant registration and curated participant profiles, and implemented a real-time, team-based leaderboard that displayed scores and rankings throughout the event.\\
+% % & \\
+
+% % & {\textbf{TestHub,}} Software Department \hfill Alborz, Iran\\
+% % & Frontend Developer \hfill May 2018 -- Nov 2018 \\
+% % & We explored forward-leaning concepts, including applying artificial intelligence to retail recommender systems, while I concurrently developed responsive admin panels and user dashboards using JavaScript, HTML, and CSS.\\
+% % & \\
+
+
+% {\color{crimson}{Service to the Community}} 
+% & \textbf{(\texttt{R}) Stands for Reviewer, (\texttt{PC}) stands for Program Committee}\\
+% & (\texttt{PC}) AAAI/ACM Conference on AI, Ethics, and Philosophy (AIES) 2026 \\
+% & (\texttt{R}) Reinforcement Learning in Big Worlds at Reinforcement Learning Conference (RLC) 2026 \\
+% & (\texttt{R}) PhilML Workshop at ICML 2026 \\
+% & (\texttt{R}) Pluralistic Alignment Workshop at ICML 2026 \\
+% & (\texttt{R}) Post-AGI Science and Society (P-AGI) Workshop at ICLR 2026 \\
+% & (\texttt{R}) IEEE Canadian Journal of Electrical \& Computer Engineering (CJECE) \\
+% & (\texttt{R}) ACM Transactions on Intelligent Systems and Technology \\
+% & \\
+
+
+
+
+% % --- Section: Talks and tutorials ---
+
+% % {\color{blue}{Talks and presentations}} 
+% % & \textbf{Designing virtuous agents with Reinforcement Learning} \hfill July 2026 \\
+% % & Formal Ethics 2026, Buffalo, USA (Presentation) \\
+% % & \\
+% % & \textbf{Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety} \hfill June 2025 \\
+% % & 2025 IEEE 34th International Symposium on Industrial Electronics (ISIE) (Talk and Presentation) \\
+% % & \\
+
+% % & \textbf{Title of your second most recent presentation} \hfill Month Year \\
+% % & Name of conference, workshop, seminar, venue, etc., or a description \\
+% % & \\
+
+% % --- Section: Various skills (programming, software, languages, etc.) ---
+
+
+
+% % {\color{blue}{Skills}} 
+% % & \textbf{Programming}\\
+% % & Proficient in: Python, JAX, C++, Pytorch, Tensorflow, Javascript, Numpy, Pandas, Matplotlib, and HTML/CSS. \\
+% % & \\
+
+% % & \textbf{Languages} \\
+% % & English (fluent), Persian (native), and Azeri (native) \\
+% % & \\
+
+% % --- Section: Service and outreach ---
+
+% % \color{Black}{Service and outreach}
+% % & \textbf{Title of organization you were in} \hfill Month Year -- Month Year \\
+% % & Description of your responsibilities. Integer pretium semper justo. Proin risus. Aliquam volutpat est vel massa. \\
+% % & \\
+
+% % --- Section: Professional society memberships ---
+% % --- Note: section title is spread over two lines ---
+
+% % {\color{Black}{Professional}} 
+% % & {\textbf{Name of professional society.}} \hfill Month Year -- Present \\
+% % {\color{Black}{memberships}} 
+% % & Some things you did or conferences you attended. Aliquam volutpat est vel massa. Sed dolor lacus, imperdiet non, ornare non, commodo eu, neque. \\
+% % & \\
+
+
+% % \color{crimson}{Mentorship}
+% % & \textbf{Academic Mentor} \hfill Aug. 2025 -- Present \\
+% % & Offering free 1:1 academic and career mentorship to students. This initiative was started by me to support students from underrepresented backgrounds. Currently mentoring one student\\
+% % & \\
+
+% % --- Section: Other interests/hobbies ---
+
+% \color{blue}{Grants}
+% & \textbf{HU University of Applied Sciences Utrecht} \hfill Aug. 2022 -- Aug. 2023 \\
+% & Recipient of a grant to conduct research on Woman, Life, Freedom movement in Iran with computational social science and machine learning approaches. 
+% % We categorized tweets published on X(former Twitter) with clustering techniques.\\
+
+% % --- End of CV! ---
+
+% \end{longtable}
+% \end{document}
