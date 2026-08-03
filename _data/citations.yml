@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-31'
+  last_updated: '2026-08-03'
 papers:
   cHOAJEgAAAAJ:35N4QoGY0k4C:
     citations: 0
@@ -34,7 +34,7 @@ papers:
     title: Introduction to reinforcement learning
     year: '2024'
   cHOAJEgAAAAJ:UebtZRa9Y70C:
-    citations: 92
+    citations: 88
     title: A high-accuracy phishing website detection method based on machine learning
     year: '2023'
   cHOAJEgAAAAJ:_kc_bZDykSQC:
@@ -54,9 +54,13 @@ papers:
     title: Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response
     year: '2025'
   cHOAJEgAAAAJ:kNdYIx-mwKoC:
-    citations: 61
+    citations: 63
     title: 'Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges'
     year: '2024'
+  cHOAJEgAAAAJ:ldfaerwXgEUC:
+    citations: 0
+    title: 'Toward Virtuous Reinforcement Learning: A Critique and Roadmap'
+    year: '2025'
   cHOAJEgAAAAJ:ns9cj8rnVeAC:
     citations: 0
     title: 'Rethinking AI Alignment: From Static Rewards to Social Reinforcement Learning'
