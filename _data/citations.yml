@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-10'
+  last_updated: '2026-08-12'
 papers:
   cHOAJEgAAAAJ:35N4QoGY0k4C:
     citations: 0
@@ -45,6 +45,10 @@ papers:
     citations: 0
     title: Toward Virtuous Reinforcement Learning
     year: '2025'
+  cHOAJEgAAAAJ:g5m5HwL7SMYC:
+    citations: 0
+    title: 'Efficient vehicle patrol scheduling for urban safety: Optimization and heuristic approaches'
+    year: '2026'
   cHOAJEgAAAAJ:iH-uZ7U-co4C:
     citations: 0
     title: Learning When to Trust in Contextual Social Bandits
