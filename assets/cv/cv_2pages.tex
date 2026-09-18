@@ -1,0 +1,129 @@
+%=====================================================================
+%  Majid Ghasemi -- Academic CV (2-page version for the AAAI-27 Doctoral Consortium)
+%  Compile with pdflatex. 11pt as required by the DC call.
+%=====================================================================
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=0.7in,right=0.7in,top=0.6in,bottom=0.6in]{geometry}
+\IfFileExists{libertine.sty}{%
+  \usepackage{libertine}%
+  \IfFileExists{newtxmath.sty}{\usepackage[libertine]{newtxmath}}{}%
+}{%
+  \IfFileExists{newtxtext.sty}{\usepackage{newtxtext}\usepackage{newtxmath}}{%
+    \usepackage{mathpazo}}%
+}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{RGB}{40,40,40}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\titleformat{\section}{\normalfont\normalsize\bfseries\scshape}{}{0em}{}[\vspace{-0.6em}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{0.8em}{0.35em}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\footnotesize\itshape Majid Ghasemi \textperiodcentered\ \thepage\ of \pageref{LastPage}}
+\newcommand{\role}[2]{\textbf{#1}\hfill{#2}\par}
+\newcommand{\sub}[2]{#1\hfill\textit{#2}\par}
+\newcommand{\gap}{\par\vspace{0.35em}}
+\newcommand{\me}{\underline{M.~Ghasemi}}
+\newcommand{\pubhead}[1]{\vspace{0.25em}\textbf{\small #1}\par}
+\newlist{pubs}{enumerate}{1}
+\setlist[pubs]{leftmargin=2.3em,labelsep=0.5em,itemsep=0.1em,topsep=0.15em,parsep=0pt}
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.1em,itemsep=0.05em,topsep=0.1em,parsep=0pt,label=\textendash}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Majid Ghasemi}\\[0.3em]
+  {\footnotesize
+   Ph.D.\ Student, Electrical \& Computer Engineering, University of Waterloo\\[0.25em]
+   \href{mailto:majid.ghasemi@uwaterloo.ca}{majid.ghasemi@uwaterloo.ca}
+   \ \textperiodcentered\ (437) 733-9113
+   \ \textperiodcentered\ \href{https://scholar.google.com/citations?user=cHOAJEgAAAAJ&hl=en}{Google Scholar}
+   \ \textperiodcentered\ \href{https://github.com/majidghassemi}{GitHub}
+   \ \textperiodcentered\ \href{https://www.linkedin.com/in/majiddghasemi/}{LinkedIn}
+  }
+\end{center}
+
+\section{Research Interests}
+Social and multi-agent reinforcement learning, machine ethics, and AI alignment: how ethical behaviour can be learned and transmitted between agents rather than hard-coded as a fixed reward.
+
+\section{Education}
+\role{University of Waterloo, Ph.D., Electrical \& Computer Engineering}{Sep 2025 -- Present}
+Advisor: Mark Crowley (CompThink Lab). Ethical decision making in multi-agent reinforcement learning: virtue transmission via social learning, contextual bandits with strategic feedback, constrained ethical agent design. Proposal defence expected by March 2027.
+\gap
+\role{Wilfrid Laurier University, M.A.Sc., Applied Computing (GPA A+)}{Sep 2023 -- May 2025}
+Advisor: Dariush Ebrahimi (Edge Computing Lab). Thesis: \textit{Reinforcement Learning for Scheduling and Routing: Electric Vehicle Charging and Patrol Scheduling}.
+\gap
+\role{Imam Khomeini International University, B.Sc., Software Engineering (GPA A--)}{Sep 2017 -- Mar 2022}
+Advisor: Mahdi Bahaghighat. Thesis on machine learning for phishing website detection.
+
+\section{Publications}
+\pubhead{Peer-Reviewed Conference Papers}
+\begin{pubs}[label={[C\arabic*]}]
+  \item \textbf{The Forager's Dilemma: Peer Enforcement Alone Is Not Enough for Stable Multi-Agent Alignment.} \me, P.~Singh, M.~Crowley. \textit{AAAI/ACM Conference on AI, Ethics, and Society (AIES)}, 2026.
+  \item \textbf{AI Alignment without Representation: From Scalar Rewards to Social Deliberation.} \me, M.~Crowley. \textit{AIES}, 2026.
+  \item \textbf{Scaling Limits of Deep Reinforcement Learning: A Stability Analysis with Maximal Update Parametrization.} \me, M.~Crowley. \textit{Canadian Conference on Artificial Intelligence}, 2026.
+  \item \textbf{Adaptive and AI-Driven Vehicle Patrol Scheduling with Integrated Emergency Response.} \me, D.~Ebrahimi. \textit{IEEE IECON}, 2025.
+  \item \textbf{Optimal and Heuristic Solutions for Efficient Vehicle Patrol Scheduling in Dynamic Urban Safety.} \me, E.~Sarkhouh, F.~Alzhouri, D.~Ebrahimi. \textit{IEEE ISIE}, 2025.
+  \item \textbf{Comparative Analysis of Reinforcement Learning for Reliable Real-Time EV Routing and Charging.} \me, F.~Alzhouri, D.~Ebrahimi. \textit{DRCN}, 2025.
+  \item \textbf{Navigating Smart Order Routing in Fixed Income Trading with Linear Programming and Dijkstra's Algorithm.} C.~Robson, M.~Misic, E.~Capper, M.~Cvetanovska, \me, F.~Alzhouri, D.~Ebrahimi. \textit{Int.\ Conf.\ on the Dynamics of Information Systems}, 2024.
+\end{pubs}
+\pubhead{Journal Articles}
+\begin{pubs}[label={[J\arabic*]}]
+  \item \textbf{Efficient Vehicle Patrol Scheduling for Urban Safety: Optimization and Heuristic Approaches.} \me, I.~Sorkhoh, F.~Alzhouri, D.~Ebrahimi. \textit{Future Generation Computer Systems}, 2026.
+  \item \textbf{Reinforcement Learning and Model-based Planning in Practice: A Survey of Algorithmic Rationale and Domain Applications.} \me, A.~Mousavi, D.~Ebrahimi. \textit{Artificial Intelligence Review}, 2026.
+  \item \textbf{Real-Time Electric Vehicle Routing and Charging Optimization with Battery Life Consideration.} D.~Ebrahimi, \me, M.~Kashefi, F.~Alzhouri. \textit{IEEE Internet of Things Journal}, 2026.
+  \item \textbf{Citation Count Prediction Based on Google Scholar Profiles and Clarivate's Journal Citation Reports.} M.~Bahaghighat, L.~Akbari, \me, Q.~Xin. \textit{Information Research}, 2023.
+  \item \textbf{A High-Accuracy Phishing Website Detection Method Based on Machine Learning.} M.~Bahaghighat, \me, F.~Ozen. \textit{Journal of Information Security and Applications}, 2023.
+\end{pubs}
+\pubhead{Peer-Reviewed Workshop Papers}
+\begin{pubs}[label={[W\arabic*]}]
+  \item \textbf{Learning When to Trust in Contextual Social Bandits.} \me, M.~Crowley. \textit{European Workshop on Reinforcement Learning (EWRL)}, 2026.
+  \item \textbf{Rethinking AI Alignment: From Static Rewards to Social Reinforcement Learning.} \me, M.~Crowley. \textit{Pluralistic Alignment Workshop, ICML}, 2026.
+  \item \textbf{Can Standard MARL Metrics Distinguish Communicative from Strategic Action?} \me, M.~Crowley. \textit{PhilML Workshop, ICML}, 2026.
+  \item \textbf{Toward Virtuous Reinforcement Learning: A Critique and Roadmap.} \me, M.~Crowley. \textit{Machine Ethics Workshop, AAAI}, 2026.
+\end{pubs}
+\pubhead{Preprints}
+\begin{pubs}[label={[P\arabic*]}]
+  \item \textbf{Objective Decoupling in Social Reinforcement Learning: Recovering Ground Truth from Sycophantic Majorities.} \me, M.~Crowley. \textit{arXiv:2602.08092}, 2026.
+  \item \textbf{Comprehensive Survey of Reinforcement Learning: From Algorithms to Practical Challenges.} \me, A.~Mousavi, D.~Ebrahimi. \textit{arXiv}, 2024.
+  \item \textbf{Introduction to Reinforcement Learning.} \me, D.~Ebrahimi. \textit{arXiv}, 2024.
+\end{pubs}
+\pubhead{Pending Submissions}
+\begin{pubs}[label={[S\arabic*]}]
+  % The DC call asks for pending submissions at AI conferences and journals.
+  % Fill in only what has actually been submitted by October 13, 2026.
+  \item \textbf{When Can Verifiable Rewards Overrule Sycophantic Majorities?.} \me, M.~Crowley. \textit{Submitted to AAAI}, 2026.
+\end{pubs}
+
+\section{Research and Industry Experience}
+\role{Kisoji Biotechnology Inc., Applied Machine Learning Intern}{May 2026 -- Aug 2026}
+Built the Expressibility Engine for antibody expression optimization: domain-adaptive prediction with Bayesian project embeddings, RL-guided experimental design (GRPO with DPP-based diversity), and sparse graph-based causal driver discovery.
+\gap
+\role{HU University of Applied Sciences Utrecht, Research Grant Recipient}{Aug 2022 -- Aug 2023}
+Computational social science and machine learning study of the Woman, Life, Freedom movement in Iran.
+
+\section{Honours and Awards}
+\sub{AIES Student Program Scholarship Award}{2026}
+\sub{Graduate Student Research and Development Award ($\times$2), University of Waterloo}{2026}
+\sub{International Doctoral Student Award, University of Waterloo}{2025 -- 2029}
+\sub{Academic Excellence Gold Medal, Wilfrid Laurier University}{2025}
+\sub{Graduate Scholarship and Graduate Fellowship, Wilfrid Laurier University}{2023 -- 2025}
+
+\section{Invited Talks}
+\sub{Designing Virtuous Agents with Reinforcement Learning, Formal Ethics 2026, Buffalo, USA}{Jul 2026}
+
+\section{Teaching}
+Teaching assistant since 2021: University of Waterloo (ECE108, ECE406, ECE250), Wilfrid Laurier University (CP468 Artificial Intelligence, CP421 Data Mining, CP312 Algorithms), Imam Khomeini International University (AI, Data Mining, Programming). Guest lectures, assessment design, grading, office hours.
+
+\section{Academic Service}
+\textbf{Program committee:} AIES 2026. \textbf{Reviewer:} RLC 2026 (RL in Big Worlds Workshop), ICML 2026 (PhilML and Pluralistic Alignment Workshops), ICLR 2026 (Post-AGI Workshop), IEEE CJECE, ACM TIST.
+
+\end{document}

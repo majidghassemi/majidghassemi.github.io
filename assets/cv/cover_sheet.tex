@@ -1,0 +1,70 @@
+%=====================================================================
+%  AAAI-27 Doctoral Consortium: Cover Sheet (1 page, single column, 11pt)
+%  Fill every [FILL] and check every [CONFIRM] before submitting.
+%=====================================================================
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=0.9in,right=0.9in,top=0.7in,bottom=0.7in]{geometry}
+\IfFileExists{libertine.sty}{%
+  \usepackage{libertine}%
+  \IfFileExists{newtxmath.sty}{\usepackage[libertine]{newtxmath}}{}%
+}{%
+  \IfFileExists{newtxtext.sty}{\usepackage{newtxtext}\usepackage{newtxmath}}{%
+    \usepackage{mathpazo}}%
+}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{RGB}{40,40,40}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+\pagestyle{empty}
+\titleformat{\section}{\normalfont\normalsize\bfseries\scshape}{}{0em}{}[\vspace{-0.6em}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{0.9em}{0.4em}
+\newcommand{\field}[2]{\textbf{#1}\quad #2\par}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Majid Ghasemi}\\[0.3em]
+  {\large Cover Sheet: AAAI-27 Doctoral Consortium Application}
+\end{center}
+
+\section{Applicant}
+\field{Full name:}{Majid Ghasemi}
+\field{Mailing address:}{Department of Electrical and Computer Engineering, University of Waterloo, 200 University Avenue West, Waterloo, ON N2L 3G1, Canada}
+\field{Email:}{\href{mailto:majid.ghasemi@uwaterloo.ca}{majid.ghasemi@uwaterloo.ca}}
+\field{Daytime phone:}{+1 (437) 733-9113}
+\field{Affiliation:}{Department of Electrical and Computer Engineering, University of Waterloo, Canada}
+\field{Home page:}{\href{https://majidghassemi.github.io}{majidghassemi.github.io} (professional academic page with photo)}
+\field{Country of citizenship:}{Iran}
+\field{Expected graduation date:}{May 2029}
+
+\section{Thesis Advisor}
+\field{Full name:}{Mark Crowley}
+\field{Title:}{Social Reinforcement Learning for Intrinsically Ethical Agents}
+\field{Department and affiliation:}{Department of Electrical and Computer Engineering, University of Waterloo, Canada}
+\field{Mailing address:}{University of Waterloo, 200 University Avenue West, Waterloo, ON N2L 3G1, Canada}
+\field{Email:}{mark.crowley@uwaterloo.ca}
+
+% \section{Suggested Mentors}
+% Up to five members of the AAAI community, in no particular order:
+% \begin{enumerate}[leftmargin=1.6em,itemsep=0pt,topsep=0pt]
+%   \item {[FILL: multi-agent RL or social learning]}
+%   \item {[FILL: machine ethics or value alignment]}
+%   \item {[FILL: bandits or online learning with unreliable feedback]}
+%   \item {[FILL: human feedback and RLHF]}
+%   \item {[FILL: philosophy of AI or AI governance]}
+% \end{enumerate}
+
+\section{Keywords}
+Multi-agent reinforcement learning, AI alignment, machine ethics, social learning, AI ethics
+
+\section{Doctoral Consortia}
+\field{Past participation:}{AIES 2026 Student Program, Malm\"o, Sweden}
+\field{Other DC applications for 2027:}{``None''}
+
+\end{document}
